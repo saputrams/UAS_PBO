@@ -254,6 +254,12 @@ public class MasterData extends javax.swing.JFrame {
 
         jLabel10.setText("Rate Gaji");
 
+        TF_Notelp.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                TF_NotelpKeyTyped(evt);
+            }
+        });
+
         TA_Alamat.setColumns(20);
         TA_Alamat.setRows(5);
         jScrollPane1.setViewportView(TA_Alamat);
@@ -261,6 +267,17 @@ public class MasterData extends javax.swing.JFrame {
         TF_MasaKerja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TF_MasaKerjaActionPerformed(evt);
+            }
+        });
+        TF_MasaKerja.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                TF_MasaKerjaKeyTyped(evt);
+            }
+        });
+
+        TF_Rate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                TF_RateKeyTyped(evt);
             }
         });
 
@@ -466,7 +483,6 @@ public class MasterData extends javax.swing.JFrame {
         // TODO add your handling code here:
         int row = TBL_Data.getSelectedRow();
         int id = Integer.parseInt(TBL_Data.getModel().getValueAt(row, 0).toString());
-        System.out.println("id = "+id);
         LoadDataDetail(id);
     }//GEN-LAST:event_TBL_DataMouseClicked
 
@@ -500,6 +516,33 @@ public class MasterData extends javax.swing.JFrame {
             ClearData();
         }
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void TF_NotelpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TF_NotelpKeyTyped
+        // TODO add your handling code here:
+        char input = evt.getKeyChar();
+        if (input < '0' || input > '9') {
+            evt.consume();
+            getToolkit().beep();
+        }
+    }//GEN-LAST:event_TF_NotelpKeyTyped
+
+    private void TF_MasaKerjaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TF_MasaKerjaKeyTyped
+        // TODO add your handling code here:
+        char input = evt.getKeyChar();
+        if (input < '0' || input > '9') {
+            evt.consume();
+            getToolkit().beep();
+        }
+    }//GEN-LAST:event_TF_MasaKerjaKeyTyped
+
+    private void TF_RateKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TF_RateKeyTyped
+        // TODO add your handling code here:
+        char input = evt.getKeyChar();
+        if (input < '0' || input > '9') {
+            evt.consume();
+            getToolkit().beep();
+        }
+    }//GEN-LAST:event_TF_RateKeyTyped
 
     /**
      * @param args the command line arguments

@@ -246,6 +246,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="TF_Notelp">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TF_NotelpKeyTyped"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
@@ -265,9 +268,13 @@
     <Component class="javax.swing.JTextField" name="TF_MasaKerja">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TF_MasaKerjaActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TF_MasaKerjaKeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TF_Rate">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TF_RateKeyTyped"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>
